@@ -1,0 +1,20 @@
+<h3 style="text-align: center; padding-top: 30px;">List of my bookings</h3>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Start</th>
+      <th scope="col">End</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of bookings">
+      <th scope="row">{{ booking.hotel_name }}</th>
+      <td>{{ booking.price | currency }}</td>
+      <td>{{ booking.booking_start | date }}</td>
+      <td>{{ booking.booking_end | date }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+
+<h3 style="text-align: center; padding-top: 30px;">List Of Hotels</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price per night</th>
+      <th scope="col">City</th>
+      <th scope="col" *ngIf="isValidUser">Book</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hotel of hotels">
+      <th scope="row">{{ hotel.hotel_name }}</th>
+      <td>{{ hotel.price | currency }}</td>
+      <td>{{ hotel.city }}</td>
+      <td>Book Now</td>
+    </tr>
+  </tbody>
+</table>
+<a routerLink="/bookings"> Go to Bookings</a>
